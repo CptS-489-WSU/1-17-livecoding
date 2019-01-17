@@ -1,0 +1,82 @@
+<!-- CptS 489, Spring 2019
+     Project: IM2-Examples
+     File: app.html
+     This file defines a skeleton SpeedScore TRACK prototype using pure JavaScript.
+     The only included file is for the fontawesome code library
+     Subject of live coding exploration in class during week 2 to provide assistance with IM 2 
+     Feel free to download this file and use it to follow along in class.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Begin HEAD section of document. Here we must use HTML comments as shown here. -->
+    <!-- Default target for all hyperlinks in this file: https://www.w3schools.com/tags/att_base_target.asp -->
+    <base target="_top"> 
+    <!-- Provide metadata on this file. Can be used by browsers, search engines, etc. -->
+    <meta charset="utf-8">
+    <!-- HTML5 method that specifies viewable part of page ('viewport'). Always use the following,
+         which sets the width of the page to the width of the device and scales page content to fit into page-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import External stylesheets and libraries using 'CDN' (content delivery network) links: -->
+    <!-- TO DO: Put fontawesome CDN here-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+ 
+<style>
+    /* Begin the STYLE section of the document. Here we must delimit comments as shown here. 
+       No other comment delimiting option is available */
+    <?!= include('css/navbarCSS'); /*top navbar and sidemenu CSS definitions*/ ?>
+    <?!= include('css/modalCSS'); /* modal dialog box CSS definitions */?>
+    <?!= include('css/appCSS');    /*this app's local CSS definitions */?>
+</style>
+   
+<body>
+  <!-- Begin the BODY section of the document. Here we are back to HTML comments, as shown here. -->
+  
+  <!-- Fixed menu and button content goes here to define app structure: the top bar,
+       the side menu, the bottom bar, and the floating contextual action button  -->
+  <?!= include('html/appStruct'); ?>
+
+  <!-- App page definitions go here. -->
+  <!-- Login page definition  -->
+  <div id="loginDiv">
+    <?!=include('html/underConstruction')?>
+  </div>
+
+  <!-- Profile page for viewing and editing user settings -->
+  <div id="profileDiv">
+    <?!=include('html/underConstruction')?>
+  </div>
+
+  <!-- Rounds page displaying the user's round history -->
+  <div id="roundsDiv">
+        <?!=include('html/underConstruction')?>
+  </div>
+
+  <!-- Page for logging a new round -->
+  <div id="logRoundDiv">
+      <?!=include('html/underConstruction')?>
+  </div>
+
+   <!-- Page  for displaying and searching for courses -->
+   <div id="coursesDiv">
+        <?!=include('html/underConstruction')?>
+   </div>
+   
+   <!-- About box -->
+   <?!=include('html/aboutBox')?>
+
+  </body>
+
+  <script>
+  //Begin SCRIPT section of document. Here we must use JavaScript comments. This is a single-line comment
+  /* And this is a 
+     multi-line comment */                                                                                
+  //Subsequent scripts will be embedded in their own script tags
+  </script>
+  <?!= include('html/eventHandlers'); //Event handlers that respond to user interaction ?> 
+  <?!= include('html/startup'); //Script to declare global vars and initialize app ?>  
+  
+</html>
