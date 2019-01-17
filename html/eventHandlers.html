@@ -14,23 +14,6 @@ function bindListenerToClassName(className, func, listenerType) {
   }
 }
 
-/* switchToPage: Given the id of the new DIV to switch to and the title for the new page, 
-  this function hides the current page and displays the new one, updating the page title and menu appropriately.
-  Note: This is a helper function that avoids the need for repeated code in the menu item handlers.
-*/
-function switchToMode(newPage,newPageTitle) {
-    document.getElementById(currPage).style.display = "none";
-    prevPage = currPage; //preserve prev page so it can be redisplayed.
-    prevPageTitle =  document.getElementById("topBarTitle").innerHTML;
-    document.getElementById(newPage).style.display = "block";
-    document.getElementById("menuBtnIcon").classList.remove("fa-times");
-    document.getElementById("menuBtnIcon").classList.add("fa-arrow-left");
-    document.getElementById("topBarTitle").innerHTML = newPageTitle;
-    currPage = newPage;
-    document.getElementById("sideMenu").style.width = "0"; //retract menu
-    menuOpen = false;
-}
-
 /* sideMenuItemClick: This function does the side menu housekeeping in cases where the item clicked 
    (of class sideMenuItem) is actually a redirect to another page.  
 */
@@ -46,14 +29,10 @@ var sideMenuItemClick = function() {
 
 //document click: If the user clicks anywhere in the document while the side menu is open, we need to
 //close the menu, toggle the menu state, and re-enable all buttons/input fields on the page.
-    
-    
+       
 //menuBtn click: When the top-left side menu button is clicked, we need to act based on which menu is
 //presently displayed -- hamburger or left arrow. 
 
 //modeBtnClick: Function that can be bound to mode button click event.  
 
-document.getElementById("menuBtn").onclick=function() {
-  document.getElementById("loginDiv").style.visibility="block";
-};
 </script>
