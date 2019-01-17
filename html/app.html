@@ -29,7 +29,7 @@
        No other comment delimiting option is available */
     <?!= include('css/navbarCSS'); /*top navbar and sidemenu CSS definitions*/ ?>
     <?!= include('css/modalCSS'); /* modal dialog box CSS definitions */?>
-    <?!= include('css/appCSS');    /*this app's local CSS definitions */?>
+    <?!= include('css/appCSS');   /*this app's local CSS definitions */?>
 </style>
    
 <body>
@@ -41,27 +41,45 @@
 
   <!-- App page definitions go here. -->
   <!-- Login page definition  -->
-  <div id="loginDiv">
+  <div id="loginDiv" hidden>
+      <h1>Log in</h1>
+    <?!=include('html/underConstruction')?>
+  </div>
+
+  <div id="feedDiv" hidden>
+      <br>
+      <br>
+      <center>><h1>Activity Feed</h1></center>
     <?!=include('html/underConstruction')?>
   </div>
 
   <!-- Profile page for viewing and editing user settings -->
-  <div id="profileDiv">
+  <div id="profileDiv" display="none">
+      <br>
+      <br>
+      <center>><h1>Edit Profile</h1></center>
     <?!=include('html/underConstruction')?>
   </div>
 
   <!-- Rounds page displaying the user's round history -->
-  <div id="roundsDiv">
-        <?!=include('html/underConstruction')?>
+  <div id="roundsDiv" display="none">
+      <br><br><h1>Rounds</h1>
+      <?!=include('html/underConstruction')?>
   </div>
 
   <!-- Page for logging a new round -->
   <div id="logRoundDiv">
+      <br>
+      <br>
+      <center>><h1>Log Round</h1></center>
       <?!=include('html/underConstruction')?>
   </div>
 
    <!-- Page  for displaying and searching for courses -->
-   <div id="coursesDiv">
+   <div id="coursesDiv" display="none">
+        <br>
+        <br>
+        <center>><h1>Courses</h1></center>
         <?!=include('html/underConstruction')?>
    </div>
    
